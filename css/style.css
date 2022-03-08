@@ -11,7 +11,7 @@ body {
 }
 main {
   width: 360px;
-  padding: 30px;
+  padding: 35px;
   background-color: hsl(216, 50%, 16%);
   display: flex;
   flex-direction: column;
@@ -24,16 +24,60 @@ main {
     width: 420px;
   }
 }
-main > img {
+main > .img {
+  position: relative;
+  overflow: hidden;
+  height: 350px;
+}
+main > .img img {
   max-width: 100%;
+  height: 350px;
   border-radius: 20px;
+}
+main > .img::before {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  content: "";
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(178, 100%, 50%);
+  z-index: 1;
+  text-align: center;
+  opacity: 0;
+  border-radius: 20px;
+}
+main > .img::after {
+  content: url("../images/icon-view.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 3;
+  opacity: 0;
+}
+main > .img:hover {
+  cursor: pointer;
+}
+main > .img:hover::before {
+  opacity: 0.5;
+}
+main > .img:hover::after {
+  opacity: 1;
 }
 main .text h1 {
   color: white;
   font-weight: 400;
 }
+main .text h1:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
 main .text p {
   color: hsl(215, 51%, 70%);
+  line-height: 1.7;
 }
 main .account {
   width: 100%;
@@ -83,6 +127,10 @@ main .avatar p {
 }
 main .avatar p span {
   color: white;
+}
+main .avatar p span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
 }
 main .avatar img {
   width: 50px;
