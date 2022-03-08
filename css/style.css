@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+main {
+  width: 360px;
+  padding: 30px;
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+}
+@media (min-width: 991px) {
+  main {
+    width: 420px;
+  }
+}
+main > img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+main .text h1 {
+  color: white;
+  font-weight: 400;
+}
+main .text p {
+  color: hsl(215, 51%, 70%);
+}
+main .account {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main .account .eth,
+main .account .clock,
+main .avatar {
+  display: flex;
+  align-items: center;
+}
+main .account .eth,
+main .account .clock {
+  justify-content: space-between;
+  gap: 7px;
+}
+main .account .eth p {
+  color: hsl(178, 100%, 50%);
+}
+main .account .clock p {
+  color: hsl(215, 51%, 70%);
+}
+main .line {
+  height: 2px;
+  width: 100%;
+  background-color: hsl(215, 32%, 27%);
+  margin-bottom: 20px;
+}
+main .avatar {
+  width: 100%;
+  justify-content: flex-start;
+  gap: 20px;
+}
+main .avatar .img {
+  padding: 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .avatar p {
+  color: hsl(215, 51%, 70%);
+}
+main .avatar p span {
+  color: white;
+}
+main .avatar img {
+  width: 50px;
+}
